@@ -91,3 +91,63 @@ footer {
   background: #f5f5f5;
   margin-top: 60px;
 }
+<section class="global-map">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Global Presence</h2>
+      <p>K-HALAL operates across multiple countries worldwide</p>
+    </div>
+
+    <div class="map-box">
+
+      <div class="map-dot" style="top:40%; left:48%;">Korea</div>
+      <div class="map-dot" style="top:45%; left:25%;">USA</div>
+      <div class="map-dot" style="top:55%; left:70%;">UAE</div>
+      <div class="map-dot" style="top:60%; left:75%;">Malaysia</div>
+      <div class="map-dot" style="top:50%; left:80%;">Indonesia</div>
+
+    </div>
+
+  </div>
+
+</section>
+.global-map {
+  padding: 100px 0;
+  background: #f8faf9;
+}
+
+.map-box {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.map-dot {
+  position: absolute;
+  background: #0a3d2e;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.map-dot:hover {
+  background: #145c43;
+}
